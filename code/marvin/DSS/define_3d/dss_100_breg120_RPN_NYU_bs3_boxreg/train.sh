@@ -1,0 +1,4 @@
+cd /home/tianyi.cui/rgb_d/DeepSlidingShape/code/marvin/;
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/tianyi.cui/my_cuda/cuda-7.5/lib64;
+ ./marvin train /home/tianyi.cui/rgb_d/DeepSlidingShape/code/marvin/DSS/define_3d/dss_100_breg120_RPN_NYU_bs3_boxreg/DSSnet.json 2>&1 | tee  /home/tianyi.cui/rgb_d/deepDetectLocal/marvinlog/dss_100_breg120_RPN_NYU_bs3_boxreg.log;
+./marvin test /home/tianyi.cui/rgb_d/DeepSlidingShape/code/marvin/DSS/define_3d/dss_100_breg120_RPN_NYU_bs3_boxreg/DSS_extractfea_po.json /home/tianyi.cui/rgb_d/deepDetectLocal/trainedcnn/dss_100_breg120_RPN_NYU_bs3_boxreg/DSSnet.marvin fc5,cls_score,box_pred /home/tianyi.cui/rgb_d/deepDetectLocal/feature/dss_100_breg120_RPN_NYU_bs3_boxregiter_10000/po/fc5.tensor,/home/tianyi.cui/rgb_d/deepDetectLocal/feature/dss_100_breg120_RPN_NYU_bs3_boxregiter_10000/po/fc6.tensor,/home/tianyi.cui/rgb_d/deepDetectLocal/feature/dss_100_breg120_RPN_NYU_bs3_boxregiter_10000/po/box_pred.tensor
