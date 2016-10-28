@@ -1,0 +1,1691 @@
+=====================================================================================================================================
+>> Hello, World! This is Marvin. I am at a rough estimate thirty billion times more intelligent than you. Let me give you an example.
+=====================================================================================================================================
+FatalError at LINE 470. Program Terminated.
+=====================================================================================================================================
+>> Hello, World! This is Marvin. I am at a rough estimate thirty billion times more intelligent than you. Let me give you an example.
+=====================================================================================================================================
+grid_size:   [4]={3,30,30,30}
+batch_size:  [1]={500}
+encode_type: 100
+scale:     100
+context_pad: 3
+Scene3DData GPU: 2
+data_root: /home/tianyi.cui/rgb_d/deepDetectLocal/sunrgbd_dss_data/
+box_reg: 1
+bb_param_weight: [6]={1,1,1,1,1,1}
+num_percate: 0
+is_render: 0
+is_combineimg: 0
+is_combinehha: 0
+box_2dreg: 0
+orein_cls: 0
+loading file /home/tianyi.cui/rgb_d/DeepSlidingShape/result/proposal//RPN_NYU//boxes_NYU_po_nb2000_fb.list
+num_categories= 20
+all postive boxe= 0
+all negative boxe= 2898000
+class 1has 0 boxes.
+class 2has 0 boxes.
+class 3has 0 boxes.
+class 4has 0 boxes.
+class 5has 0 boxes.
+class 6has 0 boxes.
+class 7has 0 boxes.
+class 8has 0 boxes.
+class 9has 0 boxes.
+class 10has 0 boxes.
+class 11has 0 boxes.
+class 12has 0 boxes.
+class 13has 0 boxes.
+class 14has 0 boxes.
+class 15has 0 boxes.
+class 16has 0 boxes.
+class 17has 0 boxes.
+class 18has 0 boxes.
+class 19has 0 boxes.
+num of scenes = 1449
+=====================================================================================================================================
+  Layers:                                                                        Responses:                                          
+=====================================================================================================================================
+  dataTest
+                                                                                 data[5]={500,3,30,30,30} RF[1,1,1] GP[1,1,1] OF[0,0,0]
+                                                                                 label[5]={500,1,1,1,1}
+                                                                                 bb_tar_diff[5]={500,120,1,1,1}
+                                                                                 bb_loss_weights[5]={500,120,1,1,1}
+  conv1 weight[5]={96,3,5,5,5} bias[5]={1,96,1,1,1}
+                                                                                 conv1[5]={500,96,28,28,28} RF[5,5,5] GP[1,1,1] OF[-1,-1,-1]
+  relu1
+  pool1
+                                                                                 pool1[5]={500,96,14,14,14} RF[6,6,6] GP[2,2,2] OF[-1,-1,-1]
+  conv2 weight[5]={192,96,3,3,3} bias[5]={1,192,1,1,1}
+                                                                                 conv2[5]={500,192,12,12,12} RF[10,10,10] GP[2,2,2] OF[-1,-1,-1]
+  relu2
+  pool2
+                                                                                 pool2[5]={500,192,6,6,6} RF[12,12,12] GP[4,4,4] OF[-1,-1,-1]
+  conv3 weight[5]={384,192,3,3,3} bias[5]={1,384,1,1,1}
+                                                                                 conv3[5]={500,384,4,4,4} RF[20,20,20] GP[4,4,4] OF[-1,-1,-1]
+  relu3
+  fc4 weight[2]={4096,24576} bias[1]={4096}
+                                                                                 fc4[5]={500,4096,1,1,1} RF[32,32,32] GP[0,0,0] OF[0,0,0]
+  relu4
+  drop4
+  fc5 weight[2]={1000,4096} bias[1]={1000}
+                                                                                 fc5[5]={500,1000,1,1,1} RF[32,32,32] GP[0,0,0] OF[0,0,0]
+  relu5
+  drop5
+  fc_cls weight[2]={20,1000} bias[1]={20}
+                                                                                 cls_score[5]={500,20,1,1,1} RF[32,32,32] GP[0,0,0] OF[0,0,0]
+  fc_box_pred weight[2]={120,1000} bias[1]={120}
+                                                                                 box_pred[5]={500,120,1,1,1} RF[32,32,32] GP[0,0,0] OF[0,0,0]
+  cls_score
+  loss_cls
+  loss_bbox
+=====================================================================================================================================
+GPU 2: Total GPU memory: 5.73749 GB
+=====================================================================================================================================
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 424ms
+ conv1.weight[5]={96,3,5,5,5} is set.
+ conv1.bias[5]={1,96,1,1,1} is set.
+ conv2.weight[5]={192,96,3,3,3} is set.
+ conv2.bias[5]={1,192,1,1,1} is set.
+ conv3.weight[5]={384,192,3,3,3} is set.
+ conv3.bias[5]={1,384,1,1,1} is set.
+ fc4.weight[2]={4096,24576} is set.
+ fc4.bias[1]={4096} is set.
+ fc5.weight[2]={1000,4096} is set.
+ fc5.bias[1]={1000} is set.
+ fc_cls.weight[2]={20,1000} is set.
+ fc_cls.bias[1]={20} is set.
+ fc_box_pred.weight[2]={120,1000} is set.
+ fc_box_pred.bias[1]={120} is set.
+=====================================================================================================================================
+Iteration 0   loss = 0.607206 * 1  eval = 0.802    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1481ms
+Iteration 1   loss = 0.445518 * 1  eval = 0.868    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1471ms
+Iteration 2   loss = 0.219956 * 1  eval = 0.944    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1475ms
+Iteration 3   loss = 0.160953 * 1  eval = 0.958    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1828ms
+Iteration 4   loss = 0.059647 * 1  eval = 0.99    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1777ms
+Iteration 5   loss = 0.0482976 * 1  eval = 0.992    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1752ms
+Iteration 6   loss = 0.063517 * 1  eval = 0.988    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1755ms
+Iteration 7   loss = 0.0358594 * 1  eval = 0.994    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1835ms
+Iteration 8   loss = 1.20768 * 1  eval = 0.848    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1746ms
+Iteration 9   loss = 0.294351 * 1  eval = 0.97    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1680ms
+Iteration 10   loss = 0.16036 * 1  eval = 0.984    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1654ms
+Iteration 11   loss = 0.0843419 * 1  eval = 0.994    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1453ms
+Iteration 12   loss = 0.355531 * 1  eval = 0.93    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1474ms
+Iteration 13   loss = 0.610027 * 1  eval = 0.908    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1464ms
+Iteration 14   loss = 0.23094 * 1  eval = 0.958    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1472ms
+Iteration 15   loss = 0.124031 * 1  eval = 0.978    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1394ms
+Iteration 16   loss = 0.0242452 * 1  eval = 1    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1395ms
+Iteration 17   loss = 0.0328629 * 1  eval = 0.996    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1416ms
+Iteration 18   loss = 0.0350948 * 1  eval = 0.994    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1414ms
+Iteration 19   loss = 0.015759 * 1  eval = 0.998    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 7338ms
+Iteration 20   loss = 0.488654 * 1  eval = 0.91    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1559ms
+Iteration 21   loss = 0.108814 * 1  eval = 0.974    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1525ms
+Iteration 22   loss = 0.0983157 * 1  eval = 0.984    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 21334ms
+Iteration 23   loss = 0.0264287 * 1  eval = 0.998    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 12215ms
+Iteration 24   loss = 0.346328 * 1  eval = 0.922    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 45786ms
+Iteration 25   loss = 0.135742 * 1  eval = 0.976    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 14011ms
+Iteration 26   loss = 0.137133 * 1  eval = 0.974    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 61398ms
+Iteration 27   loss = 0.042497 * 1  eval = 0.99    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1629ms
+Iteration 28   loss = 0.0348554 * 1  eval = 1    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1634ms
+Iteration 29   loss = 0.0434121 * 1  eval = 0.996    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1729ms
+Iteration 30   loss = 0.0264004 * 1  eval = 0.998    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1735ms
+Iteration 31   loss = 0.0104309 * 1  eval = 1    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1837ms
+Iteration 32   loss = 0.61711 * 1  eval = 0.824    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1802ms
+Iteration 33   loss = 0.239547 * 1  eval = 0.938    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1708ms
+Iteration 34   loss = 0.0746174 * 1  eval = 0.988    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1653ms
+Iteration 35   loss = 0.029664 * 1  eval = 0.994    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1656ms
+Iteration 36   loss = 0.614025 * 1  eval = 0.896    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1613ms
+Iteration 37   loss = 0.600279 * 1  eval = 0.91    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1592ms
+Iteration 38   loss = 0.266866 * 1  eval = 0.958    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1595ms
+Iteration 39   loss = 0.247031 * 1  eval = 0.968    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 2224ms
+Iteration 40   loss = 0.611736 * 1  eval = 0.848    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 2065ms
+Iteration 41   loss = 0.149137 * 1  eval = 0.964    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1965ms
+Iteration 42   loss = 0.0784862 * 1  eval = 0.986    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1929ms
+Iteration 43   loss = 0.0351195 * 1  eval = 0.998    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1605ms
+Iteration 44   loss = 0.327174 * 1  eval = 0.904    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1612ms
+Iteration 45   loss = 0.192058 * 1  eval = 0.94    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1605ms
+Iteration 46   loss = 0.181584 * 1  eval = 0.962    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1575ms
+Iteration 47   loss = 0.0960407 * 1  eval = 0.982    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1676ms
+Iteration 48   loss = 0.809375 * 1  eval = 0.758    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1697ms
+Iteration 49   loss = 0.452053 * 1  eval = 0.85    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1715ms
+Iteration 50   loss = 0.476785 * 1  eval = 0.866    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1732ms
+Iteration 51   loss = 0.408435 * 1  eval = 0.902    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1943ms
+Iteration 52   loss = 0.383662 * 1  eval = 0.84    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1916ms
+Iteration 53   loss = 0.227955 * 1  eval = 0.92    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1901ms
+Iteration 54   loss = 0.11123 * 1  eval = 0.97    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1937ms
+Iteration 55   loss = 0.0881075 * 1  eval = 0.968    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 2317ms
+Iteration 56   loss = 0.888115 * 1  eval = 0.804    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 2287ms
+Iteration 57   loss = 0.349171 * 1  eval = 0.938    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 2272ms
+Iteration 58   loss = 0.160293 * 1  eval = 0.976    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 2252ms
+Iteration 59   loss = 0.0734038 * 1  eval = 0.988    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1791ms
+Iteration 60   loss = 0.517947 * 1  eval = 0.878    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1779ms
+Iteration 61   loss = 0.366633 * 1  eval = 0.928    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1765ms
+Iteration 62   loss = 0.244667 * 1  eval = 0.954    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1743ms
+Iteration 63   loss = 0.20268 * 1  eval = 0.96    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1696ms
+Iteration 64   loss = 0.94145 * 1  eval = 0.73    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1691ms
+Iteration 65   loss = 0.786589 * 1  eval = 0.81    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1686ms
+Iteration 66   loss = 0.562134 * 1  eval = 0.836    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1656ms
+Iteration 67   loss = 0.262903 * 1  eval = 0.942    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4941ms
+Iteration 68   loss = 0.940266 * 1  eval = 0.762    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1485ms
+Iteration 69   loss = 0.484785 * 1  eval = 0.878    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1596ms
+Iteration 70   loss = 0.301235 * 1  eval = 0.912    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1618ms
+Iteration 71   loss = 0.218039 * 1  eval = 0.946    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1774ms
+Iteration 72   loss = 0.133299 * 1  eval = 0.974    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1717ms
+Iteration 73   loss = 0.0726998 * 1  eval = 0.994    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1683ms
+Iteration 74   loss = 0.0423587 * 1  eval = 0.996    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1677ms
+Iteration 75   loss = 0.0475478 * 1  eval = 0.996    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 2118ms
+Iteration 76   loss = 0.107994 * 1  eval = 0.968    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1986ms
+Iteration 77   loss = 0.056287 * 1  eval = 0.994    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1900ms
+Iteration 78   loss = 0.032648 * 1  eval = 0.998    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1890ms
+Iteration 79   loss = 0.0228423 * 1  eval = 0.998    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1756ms
+Iteration 80   loss = 0.615672 * 1  eval = 0.734    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 1784ms
+Iteration 81   loss = 0.536545 * 1  eval = 0.794    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 2650ms
+Iteration 82   loss = 0.373211 * 1  eval = 0.86    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3412ms
+Iteration 83   loss = 0.220934 * 1  eval = 0.922    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3417ms
+Iteration 84   loss = 0.977151 * 1  eval = 0.66    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3430ms
+Iteration 85   loss = 0.55041 * 1  eval = 0.806    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3412ms
+Iteration 86   loss = 0.32016 * 1  eval = 0.906    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3398ms
+Iteration 87   loss = 0.184031 * 1  eval = 0.946    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3374ms
+Iteration 88   loss = 0.571417 * 1  eval = 0.756    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3428ms
+Iteration 89   loss = 0.50659 * 1  eval = 0.778    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3462ms
+Iteration 90   loss = 0.303059 * 1  eval = 0.878    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3408ms
+Iteration 91   loss = 0.213462 * 1  eval = 0.918    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 73577ms
+Iteration 92   loss = 0.534754 * 1  eval = 0.876    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3436ms
+Iteration 93   loss = 0.168409 * 1  eval = 0.97    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 87485ms
+Iteration 94   loss = 0.0152044 * 1  eval = 0.998    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3444ms
+Iteration 95   loss = 0.0182826 * 1  eval = 0.996    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3505ms
+Iteration 96   loss = 0.583062 * 1  eval = 0.942    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3496ms
+Iteration 97   loss = 0.451253 * 1  eval = 0.954    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3459ms
+Iteration 98   loss = 0.307499 * 1  eval = 0.97    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3426ms
+Iteration 99   loss = 0.119341 * 1  eval = 0.986    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 5247ms
+Iteration 100   loss = 0.237362 * 1  eval = 0.928    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 5149ms
+Iteration 101   loss = 0.156282 * 1  eval = 0.954    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 5077ms
+Iteration 102   loss = 0.113357 * 1  eval = 0.968    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4837ms
+Iteration 103   loss = 0.0484936 * 1  eval = 0.988    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4320ms
+Iteration 104   loss = 0.293372 * 1  eval = 0.928    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4049ms
+Iteration 105   loss = 0.23373 * 1  eval = 0.952    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3921ms
+Iteration 106   loss = 0.0960003 * 1  eval = 0.98    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3873ms
+Iteration 107   loss = 0.0464142 * 1  eval = 0.998    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3870ms
+Iteration 108   loss = 0.433419 * 1  eval = 0.798    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3895ms
+Iteration 109   loss = 0.255595 * 1  eval = 0.886    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3763ms
+Iteration 110   loss = 0.200655 * 1  eval = 0.934    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3695ms
+Iteration 111   loss = 0.109815 * 1  eval = 0.962    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 45493ms
+Iteration 112   loss = 1.16077 * 1  eval = 0.822    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3830ms
+Iteration 113   loss = 0.376993 * 1  eval = 0.948    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3770ms
+Iteration 114   loss = 0.285657 * 1  eval = 0.962    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3760ms
+Iteration 115   loss = 0.127323 * 1  eval = 0.986    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3485ms
+Iteration 116   loss = 0.39344 * 1  eval = 0.842    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3577ms
+Iteration 117   loss = 0.241109 * 1  eval = 0.932    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3582ms
+Iteration 118   loss = 0.257958 * 1  eval = 0.94    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3534ms
+Iteration 119   loss = 0.0796917 * 1  eval = 0.98    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3943ms
+Iteration 120   loss = 0.425971 * 1  eval = 0.802    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3897ms
+Iteration 121   loss = 0.230127 * 1  eval = 0.916    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3803ms
+Iteration 122   loss = 0.172281 * 1  eval = 0.954    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3731ms
+Iteration 123   loss = 0.137115 * 1  eval = 0.964    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3930ms
+Iteration 124   loss = 0.473854 * 1  eval = 0.842    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3886ms
+Iteration 125   loss = 0.259508 * 1  eval = 0.932    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3901ms
+Iteration 126   loss = 0.188212 * 1  eval = 0.958    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3869ms
+Iteration 127   loss = 0.124862 * 1  eval = 0.976    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4035ms
+Iteration 128   loss = 0.64932 * 1  eval = 0.806    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3953ms
+Iteration 129   loss = 0.232809 * 1  eval = 0.936    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3877ms
+Iteration 130   loss = 0.205257 * 1  eval = 0.966    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3881ms
+Iteration 131   loss = 0.122352 * 1  eval = 0.976    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3728ms
+Iteration 132   loss = 1.28747 * 1  eval = 0.716    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3734ms
+Iteration 133   loss = 0.803289 * 1  eval = 0.838    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3747ms
+Iteration 134   loss = 0.372478 * 1  eval = 0.93    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3697ms
+Iteration 135   loss = 0.336129 * 1  eval = 0.956    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3569ms
+Iteration 136   loss = 0.599197 * 1  eval = 0.754    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3527ms
+Iteration 137   loss = 0.278655 * 1  eval = 0.9    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3482ms
+Iteration 138   loss = 0.190486 * 1  eval = 0.936    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3521ms
+Iteration 139   loss = 0.186971 * 1  eval = 0.94    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3444ms
+Iteration 140   loss = 1.07273 * 1  eval = 0.598    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3457ms
+Iteration 141   loss = 0.439004 * 1  eval = 0.878    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3429ms
+Iteration 142   loss = 0.303953 * 1  eval = 0.914    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3446ms
+Iteration 143   loss = 0.166029 * 1  eval = 0.958    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3507ms
+Iteration 144   loss = 0.720598 * 1  eval = 0.814    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3498ms
+Iteration 145   loss = 0.23878 * 1  eval = 0.946    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3523ms
+Iteration 146   loss = 0.141741 * 1  eval = 0.978    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3515ms
+Iteration 147   loss = 0.0765815 * 1  eval = 0.988    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3787ms
+Iteration 148   loss = 0.534671 * 1  eval = 0.796    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3691ms
+Iteration 149   loss = 0.299533 * 1  eval = 0.894    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3597ms
+Iteration 150   loss = 0.26131 * 1  eval = 0.9    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3611ms
+Iteration 151   loss = 0.219488 * 1  eval = 0.942    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3464ms
+Iteration 152   loss = 0.36943 * 1  eval = 0.896    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3425ms
+Iteration 153   loss = 0.267116 * 1  eval = 0.922    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3397ms
+Iteration 154   loss = 0.21979 * 1  eval = 0.92    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3406ms
+Iteration 155   loss = 0.206293 * 1  eval = 0.946    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 8448ms
+Iteration 156   loss = 0.481138 * 1  eval = 0.866    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3213ms
+Iteration 157   loss = 0.221908 * 1  eval = 0.934    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3371ms
+Iteration 158   loss = 0.171808 * 1  eval = 0.952    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3376ms
+Iteration 159   loss = 0.143952 * 1  eval = 0.974    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3538ms
+Iteration 160   loss = 0.0496145 * 1  eval = 0.994    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3491ms
+Iteration 161   loss = 0.0475718 * 1  eval = 0.994    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3504ms
+Iteration 162   loss = 0.0332214 * 1  eval = 0.996    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3499ms
+Iteration 163   loss = 0.0741548 * 1  eval = 0.992    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3487ms
+Iteration 164   loss = 0.142215 * 1  eval = 0.946    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3467ms
+Iteration 165   loss = 0.0490456 * 1  eval = 0.988    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3461ms
+Iteration 166   loss = 0.0302911 * 1  eval = 0.994    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3411ms
+Iteration 167   loss = 0.0147015 * 1  eval = 1    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4472ms
+Iteration 168   loss = 0.635635 * 1  eval = 0.786    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4267ms
+Iteration 169   loss = 0.204372 * 1  eval = 0.932    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4233ms
+Iteration 170   loss = 0.132243 * 1  eval = 0.972    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3951ms
+Iteration 171   loss = 0.0928077 * 1  eval = 0.984    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3483ms
+Iteration 172   loss = 0.481327 * 1  eval = 0.874    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3500ms
+Iteration 173   loss = 0.394822 * 1  eval = 0.93    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3522ms
+Iteration 174   loss = 0.269746 * 1  eval = 0.942    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3493ms
+Iteration 175   loss = 0.198619 * 1  eval = 0.95    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3534ms
+Iteration 176   loss = 0.290444 * 1  eval = 0.876    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3491ms
+Iteration 177   loss = 0.131062 * 1  eval = 0.956    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3425ms
+Iteration 178   loss = 0.0881691 * 1  eval = 0.97    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3488ms
+Iteration 179   loss = 0.0460594 * 1  eval = 0.984    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3416ms
+Iteration 180   loss = 0.387881 * 1  eval = 0.832    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3410ms
+Iteration 181   loss = 0.215547 * 1  eval = 0.922    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3408ms
+Iteration 182   loss = 0.202377 * 1  eval = 0.908    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3421ms
+Iteration 183   loss = 0.118234 * 1  eval = 0.97    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3283ms
+Iteration 184   loss = 1.11427 * 1  eval = 0.602    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3248ms
+Iteration 185   loss = 0.934314 * 1  eval = 0.648    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3255ms
+Iteration 186   loss = 0.628503 * 1  eval = 0.778    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3257ms
+Iteration 187   loss = 0.296826 * 1  eval = 0.892    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3362ms
+Iteration 188   loss = 0.764825 * 1  eval = 0.714    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3358ms
+Iteration 189   loss = 0.89133 * 1  eval = 0.728    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3356ms
+Iteration 190   loss = 0.686799 * 1  eval = 0.734    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3360ms
+Iteration 191   loss = 0.416286 * 1  eval = 0.848    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3400ms
+Iteration 192   loss = 0.383667 * 1  eval = 0.844    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3360ms
+Iteration 193   loss = 0.338447 * 1  eval = 0.886    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3343ms
+Iteration 194   loss = 0.250913 * 1  eval = 0.924    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3298ms
+Iteration 195   loss = 0.162598 * 1  eval = 0.944    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3663ms
+Iteration 196   loss = 0.0523605 * 1  eval = 0.996    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3562ms
+Iteration 197   loss = 0.0340516 * 1  eval = 0.996    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3470ms
+Iteration 198   loss = 0.0233081 * 1  eval = 1    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3504ms
+Iteration 199   loss = 0.0227642 * 1  eval = 1    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3786ms
+Iteration 200   loss = 0.0819942 * 1  eval = 0.994    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3619ms
+Iteration 201   loss = 0.0879833 * 1  eval = 0.988    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3596ms
+Iteration 202   loss = 0.0494605 * 1  eval = 0.994    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3539ms
+Iteration 203   loss = 0.0566881 * 1  eval = 0.988    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4650ms
+Iteration 204   loss = 0.0796112 * 1  eval = 0.988    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4389ms
+Iteration 205   loss = 0.0424593 * 1  eval = 0.992    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4202ms
+Iteration 206   loss = 0.0433278 * 1  eval = 0.992    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4022ms
+Iteration 207   loss = 0.0468595 * 1  eval = 0.984    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 5033ms
+Iteration 208   loss = 0.0283363 * 1  eval = 1    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4985ms
+Iteration 209   loss = 0.0262452 * 1  eval = 1    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4755ms
+Iteration 210   loss = 0.0181129 * 1  eval = 1    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4585ms
+Iteration 211   loss = 0.0158399 * 1  eval = 1    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4631ms
+Iteration 212   loss = 0.0721944 * 1  eval = 0.982    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4683ms
+Iteration 213   loss = 0.0313627 * 1  eval = 0.994    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4687ms
+Iteration 214   loss = 0.0320063 * 1  eval = 0.996    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4523ms
+Iteration 215   loss = 0.0208208 * 1  eval = 1    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3935ms
+Iteration 216   loss = 0.226957 * 1  eval = 0.96    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3891ms
+Iteration 217   loss = 0.127619 * 1  eval = 0.976    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3828ms
+Iteration 218   loss = 0.0900677 * 1  eval = 0.986    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3751ms
+Iteration 219   loss = 0.106981 * 1  eval = 0.982    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4728ms
+Iteration 220   loss = 0.328352 * 1  eval = 0.954    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4507ms
+Iteration 221   loss = 0.442936 * 1  eval = 0.946    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4482ms
+Iteration 222   loss = 0.222537 * 1  eval = 0.972    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4439ms
+Iteration 223   loss = 0.129578 * 1  eval = 0.984    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4187ms
+Iteration 224   loss = 1.02074 * 1  eval = 0.89    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4332ms
+Iteration 225   loss = 0.498564 * 1  eval = 0.948    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4341ms
+Iteration 226   loss = 0.113074 * 1  eval = 0.988    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4357ms
+Iteration 227   loss = 0.102886 * 1  eval = 0.99    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4228ms
+Iteration 228   loss = 0.0411769 * 1  eval = 1    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4007ms
+Iteration 229   loss = 0.0298766 * 1  eval = 0.998    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3873ms
+Iteration 230   loss = 0.031241 * 1  eval = 0.998    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3801ms
+Iteration 231   loss = 0.014118 * 1  eval = 1    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4013ms
+Iteration 232   loss = 0.106929 * 1  eval = 0.97    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3886ms
+Iteration 233   loss = 0.0569429 * 1  eval = 0.988    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3837ms
+Iteration 234   loss = 0.0477857 * 1  eval = 0.992    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3740ms
+Iteration 235   loss = 0.0515011 * 1  eval = 0.992    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3681ms
+Iteration 236   loss = 0.442278 * 1  eval = 0.822    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3628ms
+Iteration 237   loss = 0.235834 * 1  eval = 0.908    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3580ms
+Iteration 238   loss = 0.217362 * 1  eval = 0.94    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3610ms
+Iteration 239   loss = 0.142759 * 1  eval = 0.954    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3746ms
+Iteration 240   loss = 1.69546 * 1  eval = 0.622    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3598ms
+Iteration 241   loss = 0.412475 * 1  eval = 0.924    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3518ms
+Iteration 242   loss = 0.208212 * 1  eval = 0.97    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3529ms
+Iteration 243   loss = 0.105549 * 1  eval = 0.978    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4248ms
+Iteration 244   loss = 0.532402 * 1  eval = 0.806    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3976ms
+Iteration 245   loss = 0.272828 * 1  eval = 0.916    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3891ms
+Iteration 246   loss = 0.188345 * 1  eval = 0.952    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4002ms
+Iteration 247   loss = 0.165885 * 1  eval = 0.96    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4673ms
+Iteration 248   loss = 0.4915 * 1  eval = 0.886    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4071ms
+Iteration 249   loss = 0.254336 * 1  eval = 0.944    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3843ms
+Iteration 250   loss = 0.170453 * 1  eval = 0.962    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3774ms
+Iteration 251   loss = 0.0926642 * 1  eval = 0.982    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3999ms
+Iteration 252   loss = 0.277496 * 1  eval = 0.916    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4007ms
+Iteration 253   loss = 0.112913 * 1  eval = 0.97    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3968ms
+Iteration 254   loss = 0.159255 * 1  eval = 0.978    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3962ms
+Iteration 255   loss = 0.0703773 * 1  eval = 0.988    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3827ms
+Iteration 256   loss = 0.296914 * 1  eval = 0.916    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3753ms
+Iteration 257   loss = 0.158238 * 1  eval = 0.972    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3729ms
+Iteration 258   loss = 0.087408 * 1  eval = 0.982    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3632ms
+Iteration 259   loss = 0.0411902 * 1  eval = 0.992    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3546ms
+Iteration 260   loss = 0.431908 * 1  eval = 0.842    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3535ms
+Iteration 261   loss = 0.23439 * 1  eval = 0.92    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3500ms
+Iteration 262   loss = 0.230057 * 1  eval = 0.936    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3520ms
+Iteration 263   loss = 0.158297 * 1  eval = 0.952    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3562ms
+Iteration 264   loss = 0.696838 * 1  eval = 0.742    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3543ms
+Iteration 265   loss = 0.417463 * 1  eval = 0.87    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3562ms
+Iteration 266   loss = 0.337105 * 1  eval = 0.88    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3570ms
+Iteration 267   loss = 0.264454 * 1  eval = 0.918    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3792ms
+Iteration 268   loss = 0.210819 * 1  eval = 0.924    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3651ms
+Iteration 269   loss = 0.138316 * 1  eval = 0.956    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3601ms
+Iteration 270   loss = 0.118757 * 1  eval = 0.974    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3673ms
+Iteration 271   loss = 0.0904332 * 1  eval = 0.976    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3562ms
+Iteration 272   loss = 0.613049 * 1  eval = 0.79    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3427ms
+Iteration 273   loss = 0.262448 * 1  eval = 0.912    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3415ms
+Iteration 274   loss = 0.281428 * 1  eval = 0.934    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3394ms
+Iteration 275   loss = 0.271408 * 1  eval = 0.952    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4057ms
+Iteration 276   loss = 0.854026 * 1  eval = 0.728    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4017ms
+Iteration 277   loss = 0.48767 * 1  eval = 0.868    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3946ms
+Iteration 278   loss = 0.196553 * 1  eval = 0.962    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3798ms
+Iteration 279   loss = 0.131208 * 1  eval = 0.976    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4048ms
+Iteration 280   loss = 0.319991 * 1  eval = 0.88    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4001ms
+Iteration 281   loss = 0.171013 * 1  eval = 0.942    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3921ms
+Iteration 282   loss = 0.131784 * 1  eval = 0.966    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3945ms
+Iteration 283   loss = 0.0879577 * 1  eval = 0.982    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3729ms
+Iteration 284   loss = 0.482649 * 1  eval = 0.818    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3568ms
+Iteration 285   loss = 0.181557 * 1  eval = 0.946    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3565ms
+Iteration 286   loss = 0.091762 * 1  eval = 0.982    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3606ms
+Iteration 287   loss = 0.113527 * 1  eval = 0.988    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 9057ms
+Iteration 288   loss = 0.359164 * 1  eval = 0.904    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3355ms
+Iteration 289   loss = 0.257913 * 1  eval = 0.944    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 9302ms
+Iteration 290   loss = 0.238159 * 1  eval = 0.95    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3329ms
+Iteration 291   loss = 0.211598 * 1  eval = 0.956    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3622ms
+Iteration 292   loss = 0.384064 * 1  eval = 0.9    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3693ms
+Iteration 293   loss = 0.405208 * 1  eval = 0.896    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3671ms
+Iteration 294   loss = 0.290826 * 1  eval = 0.93    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3667ms
+Iteration 295   loss = 0.235898 * 1  eval = 0.95    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4079ms
+Iteration 296   loss = 0.385399 * 1  eval = 0.828    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3991ms
+Iteration 297   loss = 0.242287 * 1  eval = 0.928    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3954ms
+Iteration 298   loss = 0.143513 * 1  eval = 0.97    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3842ms
+Iteration 299   loss = 0.12172 * 1  eval = 0.964    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4204ms
+Iteration 300   loss = 1.23933 * 1  eval = 0.762    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4089ms
+Iteration 301   loss = 0.575274 * 1  eval = 0.9    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4064ms
+Iteration 302   loss = 0.474514 * 1  eval = 0.924    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4025ms
+Iteration 303   loss = 0.229782 * 1  eval = 0.956    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3903ms
+Iteration 304   loss = 0.984811 * 1  eval = 0.77    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3914ms
+Iteration 305   loss = 0.50123 * 1  eval = 0.868    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3932ms
+Iteration 306   loss = 0.291154 * 1  eval = 0.928    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3963ms
+Iteration 307   loss = 0.166508 * 1  eval = 0.962    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3543ms
+Iteration 308   loss = 0.653535 * 1  eval = 0.82    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3544ms
+Iteration 309   loss = 0.376242 * 1  eval = 0.92    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3549ms
+Iteration 310   loss = 0.261582 * 1  eval = 0.932    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3559ms
+Iteration 311   loss = 0.140798 * 1  eval = 0.976    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4072ms
+Iteration 312   loss = 0.725214 * 1  eval = 0.864    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3976ms
+Iteration 313   loss = 0.311379 * 1  eval = 0.954    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3910ms
+Iteration 314   loss = 0.200564 * 1  eval = 0.968    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3826ms
+Iteration 315   loss = 0.102354 * 1  eval = 0.98    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3969ms
+Iteration 316   loss = 0.482727 * 1  eval = 0.852    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3969ms
+Iteration 317   loss = 0.216318 * 1  eval = 0.952    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3929ms
+Iteration 318   loss = 0.125076 * 1  eval = 0.972    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3880ms
+Iteration 319   loss = 0.0683758 * 1  eval = 0.988    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4211ms
+Iteration 320   loss = 0.801925 * 1  eval = 0.8    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3992ms
+Iteration 321   loss = 0.280859 * 1  eval = 0.944    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3838ms
+Iteration 322   loss = 0.167003 * 1  eval = 0.97    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3830ms
+Iteration 323   loss = 0.161236 * 1  eval = 0.962    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3648ms
+Iteration 324   loss = 0.648745 * 1  eval = 0.71    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3605ms
+Iteration 325   loss = 0.292579 * 1  eval = 0.864    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3625ms
+Iteration 326   loss = 0.177895 * 1  eval = 0.924    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3553ms
+Iteration 327   loss = 0.112512 * 1  eval = 0.958    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4132ms
+Iteration 328   loss = 0.280055 * 1  eval = 0.902    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3941ms
+Iteration 329   loss = 0.12587 * 1  eval = 0.966    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3916ms
+Iteration 330   loss = 0.0661895 * 1  eval = 0.986    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3913ms
+Iteration 331   loss = 0.0670656 * 1  eval = 0.986    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3884ms
+Iteration 332   loss = 0.361845 * 1  eval = 0.898    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3799ms
+Iteration 333   loss = 0.0811247 * 1  eval = 0.98    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3746ms
+Iteration 334   loss = 0.109667 * 1  eval = 0.978    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3765ms
+Iteration 335   loss = 0.0526807 * 1  eval = 0.982    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3793ms
+Iteration 336   loss = 0.838124 * 1  eval = 0.794    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3705ms
+Iteration 337   loss = 0.120604 * 1  eval = 0.97    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3650ms
+Iteration 338   loss = 0.0981182 * 1  eval = 0.972    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3578ms
+Iteration 339   loss = 0.0573328 * 1  eval = 0.986    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3876ms
+Iteration 340   loss = 0.090013 * 1  eval = 0.974    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 61329ms
+Iteration 341   loss = 0.0915018 * 1  eval = 0.976    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 31933ms
+Iteration 342   loss = 0.0947826 * 1  eval = 0.972    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 36543ms
+Iteration 343   loss = 0.0297797 * 1  eval = 0.996    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4578ms
+Iteration 344   loss = 0.126035 * 1  eval = 0.968    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4428ms
+Iteration 345   loss = 0.0842893 * 1  eval = 0.984    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4957ms
+Iteration 346   loss = 0.0351056 * 1  eval = 0.994    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4657ms
+Iteration 347   loss = 0.0275264 * 1  eval = 0.994    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 5082ms
+Iteration 348   loss = 0.0602074 * 1  eval = 0.994    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4809ms
+Iteration 349   loss = 0.0404452 * 1  eval = 0.996    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4381ms
+Iteration 350   loss = 0.0180613 * 1  eval = 0.998    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4576ms
+Iteration 351   loss = 0.0267595 * 1  eval = 0.996    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 5181ms
+Iteration 352   loss = 0.0141432 * 1  eval = 1    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 5640ms
+Iteration 353   loss = 0.0106263 * 1  eval = 1    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 5566ms
+Iteration 354   loss = 0.0123261 * 1  eval = 1    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 5462ms
+Iteration 355   loss = 0.0098706 * 1  eval = 1    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4593ms
+Iteration 356   loss = 0.669904 * 1  eval = 0.84    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4507ms
+Iteration 357   loss = 0.274862 * 1  eval = 0.95    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4380ms
+Iteration 358   loss = 0.117061 * 1  eval = 0.986    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4358ms
+Iteration 359   loss = 0.120782 * 1  eval = 0.976    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3568ms
+Iteration 360   loss = 0.114409 * 1  eval = 0.976    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3540ms
+Iteration 361   loss = 0.0834437 * 1  eval = 0.982    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3542ms
+Iteration 362   loss = 0.0433544 * 1  eval = 0.994    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3480ms
+Iteration 363   loss = 0.0263985 * 1  eval = 0.998    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3884ms
+Iteration 364   loss = 1.41891 * 1  eval = 0.568    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3727ms
+Iteration 365   loss = 0.797443 * 1  eval = 0.784    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3765ms
+Iteration 366   loss = 0.507245 * 1  eval = 0.874    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3820ms
+Iteration 367   loss = 0.28248 * 1  eval = 0.944    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3498ms
+Iteration 368   loss = 0.292091 * 1  eval = 0.932    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3613ms
+Iteration 369   loss = 0.185443 * 1  eval = 0.962    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3593ms
+Iteration 370   loss = 0.103491 * 1  eval = 0.974    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3564ms
+Iteration 371   loss = 0.100977 * 1  eval = 0.984    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3962ms
+Iteration 372   loss = 0.481114 * 1  eval = 0.844    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3858ms
+Iteration 373   loss = 0.249271 * 1  eval = 0.91    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3751ms
+Iteration 374   loss = 0.204994 * 1  eval = 0.932    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3738ms
+Iteration 375   loss = 0.19142 * 1  eval = 0.952    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3666ms
+Iteration 376   loss = 0.187407 * 1  eval = 0.95    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3518ms
+Iteration 377   loss = 0.0710504 * 1  eval = 0.988    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3548ms
+Iteration 378   loss = 0.0636078 * 1  eval = 0.988    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3582ms
+Iteration 379   loss = 0.0291242 * 1  eval = 0.994    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3369ms
+Iteration 380   loss = 0.203536 * 1  eval = 0.93    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3396ms
+Iteration 381   loss = 0.0813194 * 1  eval = 0.974    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3350ms
+Iteration 382   loss = 0.0418897 * 1  eval = 0.992    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 27867ms
+Iteration 383   loss = 0.0361943 * 1  eval = 0.99    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3427ms
+Iteration 384   loss = 0.28546 * 1  eval = 0.882    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3378ms
+Iteration 385   loss = 0.166942 * 1  eval = 0.946    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3455ms
+Iteration 386   loss = 0.122555 * 1  eval = 0.958    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3542ms
+Iteration 387   loss = 0.088374 * 1  eval = 0.974    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3502ms
+Iteration 388   loss = 0.83758 * 1  eval = 0.654    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3463ms
+Iteration 389   loss = 0.648729 * 1  eval = 0.758    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3503ms
+Iteration 390   loss = 0.465998 * 1  eval = 0.846    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3568ms
+Iteration 391   loss = 0.234956 * 1  eval = 0.922    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3586ms
+Iteration 392   loss = 0.648448 * 1  eval = 0.726    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3534ms
+Iteration 393   loss = 0.567287 * 1  eval = 0.756    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3534ms
+Iteration 394   loss = 0.51216 * 1  eval = 0.79    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3573ms
+Iteration 395   loss = 0.300818 * 1  eval = 0.89    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3832ms
+Iteration 396   loss = 0.276001 * 1  eval = 0.898    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3764ms
+Iteration 397   loss = 0.15614 * 1  eval = 0.948    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3707ms
+Iteration 398   loss = 0.129407 * 1  eval = 0.968    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3438ms
+Iteration 399   loss = 0.0511597 * 1  eval = 0.992    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3708ms
+Iteration 400   loss = 0.418972 * 1  eval = 0.816    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3711ms
+Iteration 401   loss = 0.247957 * 1  eval = 0.914    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3690ms
+Iteration 402   loss = 0.16777 * 1  eval = 0.948    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3560ms
+Iteration 403   loss = 0.0915031 * 1  eval = 0.97    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3559ms
+Iteration 404   loss = 0.529226 * 1  eval = 0.81    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3449ms
+Iteration 405   loss = 0.277867 * 1  eval = 0.93    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3443ms
+Iteration 406   loss = 0.295137 * 1  eval = 0.92    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3490ms
+Iteration 407   loss = 0.163204 * 1  eval = 0.966    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3412ms
+Iteration 408   loss = 0.617375 * 1  eval = 0.858    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3401ms
+Iteration 409   loss = 0.440556 * 1  eval = 0.914    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3360ms
+Iteration 410   loss = 0.234348 * 1  eval = 0.962    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3289ms
+Iteration 411   loss = 0.107186 * 1  eval = 0.984    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4408ms
+Iteration 412   loss = 0.0511334 * 1  eval = 0.998    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4475ms
+Iteration 413   loss = 0.028319 * 1  eval = 0.998    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4227ms
+Iteration 414   loss = 0.0303809 * 1  eval = 0.996    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4351ms
+Iteration 415   loss = 0.0350391 * 1  eval = 0.994    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3756ms
+Iteration 416   loss = 0.959369 * 1  eval = 0.722    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3648ms
+Iteration 417   loss = 0.62523 * 1  eval = 0.854    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3680ms
+Iteration 418   loss = 0.349125 * 1  eval = 0.904    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3717ms
+Iteration 419   loss = 0.255059 * 1  eval = 0.932    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3536ms
+Iteration 420   loss = 0.673234 * 1  eval = 0.756    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3452ms
+Iteration 421   loss = 0.551218 * 1  eval = 0.758    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3448ms
+Iteration 422   loss = 0.5836 * 1  eval = 0.796    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3462ms
+Iteration 423   loss = 0.305853 * 1  eval = 0.898    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3262ms
+Iteration 424   loss = 0.629095 * 1  eval = 0.756    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3249ms
+Iteration 425   loss = 0.619581 * 1  eval = 0.788    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3246ms
+Iteration 426   loss = 0.419854 * 1  eval = 0.838    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3224ms
+Iteration 427   loss = 0.261257 * 1  eval = 0.914    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3232ms
+Iteration 428   loss = 1.15998 * 1  eval = 0.63    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3215ms
+Iteration 429   loss = 0.507404 * 1  eval = 0.822    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3182ms
+Iteration 430   loss = 0.457919 * 1  eval = 0.822    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3184ms
+Iteration 431   loss = 0.231022 * 1  eval = 0.918    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3236ms
+Iteration 432   loss = 0.527834 * 1  eval = 0.812    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3203ms
+Iteration 433   loss = 0.318809 * 1  eval = 0.886    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3203ms
+Iteration 434   loss = 0.236118 * 1  eval = 0.924    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3221ms
+Iteration 435   loss = 0.191357 * 1  eval = 0.938    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3657ms
+Iteration 436   loss = 0.365874 * 1  eval = 0.85    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 5092ms
+Iteration 437   loss = 0.224417 * 1  eval = 0.922    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3535ms
+Iteration 438   loss = 0.178294 * 1  eval = 0.94    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3544ms
+Iteration 439   loss = 0.117047 * 1  eval = 0.974    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3362ms
+Iteration 440   loss = 0.273979 * 1  eval = 0.882    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3332ms
+Iteration 441   loss = 0.220274 * 1  eval = 0.91    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3332ms
+Iteration 442   loss = 0.118456 * 1  eval = 0.966    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3329ms
+Iteration 443   loss = 0.101986 * 1  eval = 0.97    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3504ms
+Iteration 444   loss = 1.29696 * 1  eval = 0.698    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3438ms
+Iteration 445   loss = 0.695251 * 1  eval = 0.86    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3410ms
+Iteration 446   loss = 0.41525 * 1  eval = 0.908    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3387ms
+Iteration 447   loss = 0.282165 * 1  eval = 0.944    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4362ms
+Iteration 448   loss = 1.9338 * 1  eval = 0.59    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4362ms
+Iteration 449   loss = 0.481319 * 1  eval = 0.862    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4310ms
+Iteration 450   loss = 0.395274 * 1  eval = 0.89    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 4125ms
+Iteration 451   loss = 0.241634 * 1  eval = 0.936    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3333ms
+Iteration 452   loss = 1.0489 * 1  eval = 0.624    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3323ms
+Iteration 453   loss = 0.892179 * 1  eval = 0.71    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3323ms
+Iteration 454   loss = 0.664088 * 1  eval = 0.812    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3328ms
+Iteration 455   loss = 0.393043 * 1  eval = 0.88    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3268ms
+Iteration 456   loss = 0.404498 * 1  eval = 0.848    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3243ms
+Iteration 457   loss = 0.294506 * 1  eval = 0.918    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3266ms
+Iteration 458   loss = 0.172462 * 1  eval = 0.944    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3242ms
+Iteration 459   loss = 0.125583 * 1  eval = 0.964    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3300ms
+Iteration 460   loss = 1.28089 * 1  eval = 0.6    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3401ms
+Iteration 461   loss = 1.30647 * 1  eval = 0.622    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3379ms
+Iteration 462   loss = 0.847848 * 1  eval = 0.726    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3434ms
+Iteration 463   loss = 0.623473 * 1  eval = 0.822    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3456ms
+Iteration 464   loss = 0.551453 * 1  eval = 0.84    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3371ms
+Iteration 465   loss = 0.50698 * 1  eval = 0.874    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3333ms
+Iteration 466   loss = 0.453015 * 1  eval = 0.894    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3345ms
+Iteration 467   loss = 0.179861 * 1  eval = 0.95    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3518ms
+Iteration 468   loss = 1.4204 * 1  eval = 0.528    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3430ms
+Iteration 469   loss = 1.13092 * 1  eval = 0.624    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3390ms
+Iteration 470   loss = 0.6868 * 1  eval = 0.804    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3366ms
+Iteration 471   loss = 0.504505 * 1  eval = 0.874    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3366ms
+Iteration 472   loss = 1.08491 * 1  eval = 0.57    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3284ms
+Iteration 473   loss = 0.925722 * 1  eval = 0.728    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3305ms
+Iteration 474   loss = 0.705917 * 1  eval = 0.794    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3297ms
+Iteration 475   loss = 0.434079 * 1  eval = 0.87    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3340ms
+Iteration 476   loss = 1.53237 * 1  eval = 0.528    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3429ms
+Iteration 477   loss = 1.15886 * 1  eval = 0.628    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3444ms
+Iteration 478   loss = 0.913691 * 1  eval = 0.73    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3493ms
+Iteration 479   loss = 0.527033 * 1  eval = 0.828    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3212ms
+Iteration 480   loss = 1.42023 * 1  eval = 0.624    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3241ms
+Iteration 481   loss = 1.29174 * 1  eval = 0.696    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3309ms
+Iteration 482   loss = 0.916133 * 1  eval = 0.786    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3321ms
+Iteration 483   loss = 0.392733 * 1  eval = 0.908    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3355ms
+Iteration 484   loss = 1.06105 * 1  eval = 0.672    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3345ms
+Iteration 485   loss = 1.13351 * 1  eval = 0.692    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3316ms
+Iteration 486   loss = 0.789363 * 1  eval = 0.778    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3335ms
+Iteration 487   loss = 0.45505 * 1  eval = 0.896    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3389ms
+Iteration 488   loss = 1.38952 * 1  eval = 0.502    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3336ms
+Iteration 489   loss = 1.00417 * 1  eval = 0.646    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3345ms
+Iteration 490   loss = 0.749741 * 1  eval = 0.754    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3336ms
+Iteration 491   loss = 0.598011 * 1  eval = 0.82    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3311ms
+Iteration 492   loss = 1.22642 * 1  eval = 0.686    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3369ms
+Iteration 493   loss = 0.604912 * 1  eval = 0.834    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3352ms
+Iteration 494   loss = 0.304128 * 1  eval = 0.916    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3311ms
+Iteration 495   loss = 0.180751 * 1  eval = 0.948    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3222ms
+Iteration 496   loss = 0.892525 * 1  eval = 0.672    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3266ms
+Iteration 497   loss = 0.493874 * 1  eval = 0.85    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3243ms
+Iteration 498   loss = 0.286981 * 1  eval = 0.912    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3232ms
+Iteration 499   loss = 0.208219 * 1  eval = 0.93    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3438ms
+Iteration 500   loss = 0.518264 * 1  eval = 0.808    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3297ms
+Iteration 501   loss = 0.328652 * 1  eval = 0.904    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3286ms
+Iteration 502   loss = 0.305203 * 1  eval = 0.9    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3300ms
+Iteration 503   loss = 0.33738 * 1  eval = 0.914    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3480ms
+Iteration 504   loss = 0.725664 * 1  eval = 0.73    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3376ms
+Iteration 505   loss = 0.756008 * 1  eval = 0.758    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3399ms
+Iteration 506   loss = 0.575052 * 1  eval = 0.848    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3371ms
+Iteration 507   loss = 0.503879 * 1  eval = 0.852    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3397ms
+Iteration 508   loss = 0.641307 * 1  eval = 0.738    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3383ms
+Iteration 509   loss = 0.558799 * 1  eval = 0.788    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3449ms
+Iteration 510   loss = 0.424694 * 1  eval = 0.862    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3412ms
+Iteration 511   loss = 0.289458 * 1  eval = 0.916    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3465ms
+Iteration 512   loss = 0.517078 * 1  eval = 0.844    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3486ms
+Iteration 513   loss = 0.444709 * 1  eval = 0.92    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3521ms
+Iteration 514   loss = 0.288886 * 1  eval = 0.956    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3509ms
+Iteration 515   loss = 0.209151 * 1  eval = 0.968    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3401ms
+Iteration 516   loss = 0.369533 * 1  eval = 0.874    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3400ms
+Iteration 517   loss = 0.211252 * 1  eval = 0.93    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3415ms
+Iteration 518   loss = 0.174471 * 1  eval = 0.95    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3422ms
+Iteration 519   loss = 0.170401 * 1  eval = 0.964    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3212ms
+Iteration 520   loss = 0.488315 * 1  eval = 0.774    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3269ms
+Iteration 521   loss = 0.317395 * 1  eval = 0.89    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3240ms
+Iteration 522   loss = 0.235493 * 1  eval = 0.93    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3233ms
+Iteration 523   loss = 0.24513 * 1  eval = 0.93    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3450ms
+Iteration 524   loss = 0.0844473 * 1  eval = 0.99    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3408ms
+Iteration 525   loss = 0.141152 * 1  eval = 0.98    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3419ms
+Iteration 526   loss = 0.105026 * 1  eval = 0.982    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 3396ms
+Iteration 527   loss = 0.0804173 * 1  eval = 0.988    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 68992ms
+Iteration 528   loss = 1.2859 * 1  eval = 0.644    loss = 0 * 120   
+category_count[20]={500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+perfetch time 36930ms
+Iteration 529   loss = 0.976246 * 1  eval = 0.776    loss = 0 * 120   
+./DSS/define_3d/dss_100_breg120_RPN_NYU_bs3_boxreg/train.sh: line 4: 25616 Terminated              ./marvin test /home/tianyi.cui/rgb_d/DeepSlidingShape/code/marvin/DSS/define_3d/dss_100_breg120_RPN_NYU_bs3_boxreg/DSS_extractfea_po.json /home/tianyi.cui/rgb_d/deepDetectLocal/trainedcnn/dss_100_breg120_RPN_NYU_bs3_boxreg/DSSnet.marvin fc5,cls_score,box_pred /home/tianyi.cui/rgb_d/deepDetectLocal/feature/dss_100_breg120_RPN_NYU_bs3_boxregiter_10000/po/fc5.tensor,/home/tianyi.cui/rgb_d/deepDetectLocal/feature/dss_100_breg120_RPN_NYU_bs3_boxregiter_10000/po/fc6.tensor,/home/tianyi.cui/rgb_d/deepDetectLocal/feature/dss_100_breg120_RPN_NYU_bs3_boxregiter_10000/po/box_pred.tensor
